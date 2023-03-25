@@ -10,8 +10,8 @@ public class DiamondApp {
             int position;
             for (int i = 0; i < height * width; i++) {
                 position = i - (width * lineNumber);
-                if (position == width/2 - Math.min(lineNumber, height - 1 - lineNumber)
-                        || position == width/2 + Math.min(lineNumber, height - 1 - lineNumber) ) {
+                if (position == width/2 - (Math.min(lineNumber, height - 1 - lineNumber)) * (width/height)
+                        || position == width/2 + (Math.min(lineNumber, height - 1 - lineNumber)) * (width/height)) {
                     stringBuilder.append("#");
                 } else {
                     stringBuilder.append(" ");
